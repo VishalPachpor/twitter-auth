@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
 				name,
 				image,
 				email: email || null,
-				user_id: session.user.email || session.user.id || null,
+				user_id: session.user.email || null,
 				created_at: new Date().toISOString(),
 			})
 			.select()
