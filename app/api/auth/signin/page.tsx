@@ -23,13 +23,18 @@ export default function SignIn() {
 
   return (
     <>
-      {Object.values(providers).map((provider) => (
-        <div key={provider.name}>
-          <button onClick={() => signIn(provider.id)}>
-            Sign in with {provider.name}
-          </button>
-        </div>
-      ))}
+      {Object.values(providers).map((provider) => {
+        const callbackUrl = typeof window !== "undefined" 
+          ? `${window.location.origin}/waitlist?join=true&spot=1`
+          : "/waitlist?join=true&spot=1";
+        return (
+          <div key={provider.name}>
+            <button onClick={() => signIn(provider.id, { callbackUrl })}>
+              Sign in with {provider.name}
+            </button>
+          </div>
+        );
+      })}
     </>
   );
 }

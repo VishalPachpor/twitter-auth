@@ -122,8 +122,9 @@ const handler = NextAuth({
       return token;
     },
     async session({ session, token }) {
-      // Add access_token to session for client-side use if needed
+      // Add access_token and refresh_token to session for client-side use if needed
       session.accessToken = token.accessToken as string;
+      session.refreshToken = token.refreshToken as string;
       // Add username and profile picture to session user
       if (token.username && session.user) {
         session.user.username = token.username as string;

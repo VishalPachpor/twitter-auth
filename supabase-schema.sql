@@ -32,6 +32,7 @@ ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 -- Create a policy that allows inserts (auth is verified in API route)
 -- Note: Since we're verifying auth in the Next.js API route, we can allow anon inserts
 -- The API route handles authentication before calling Supabase
+DROP POLICY IF EXISTS "Allow authenticated inserts" ON profiles;
 CREATE POLICY "Allow authenticated inserts"
   ON profiles
   FOR INSERT
@@ -39,6 +40,7 @@ CREATE POLICY "Allow authenticated inserts"
   WITH CHECK (true);
 
 -- Create a policy that allows users to read all profiles (adjust as needed)
+DROP POLICY IF EXISTS "Anyone can read profiles" ON profiles;
 CREATE POLICY "Anyone can read profiles"
   ON profiles
   FOR SELECT
@@ -46,6 +48,7 @@ CREATE POLICY "Anyone can read profiles"
   USING (true);
 
 -- Create a policy that allows users to update their own profiles
+DROP POLICY IF EXISTS "Users can update their own profiles" ON profiles;
 CREATE POLICY "Users can update their own profiles"
   ON profiles
   FOR UPDATE
@@ -63,6 +66,7 @@ END;
 $$ language 'plpgsql';
 
 -- Create trigger to automatically update updated_at
+DROP TRIGGER IF EXISTS update_profiles_updated_at ON profiles;
 CREATE TRIGGER update_profiles_updated_at
   BEFORE UPDATE ON profiles
   FOR EACH ROW
