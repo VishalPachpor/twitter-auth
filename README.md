@@ -30,12 +30,14 @@ A Next.js application that implements Twitter OAuth authentication and stores us
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/twitter-auth.git
 cd twitter-auth
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
@@ -96,6 +98,7 @@ twitter-auth/
 ## Deployment
 
 See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions on:
+
 - Pushing to GitHub
 - Deploying to Vercel
 - Configuring Twitter callback URLs
@@ -103,14 +106,14 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions on:
 
 ## Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `TWITTER_CLIENT_ID` | Twitter OAuth Client ID | Yes |
-| `TWITTER_CLIENT_SECRET` | Twitter OAuth Client Secret | Yes |
-| `NEXTAUTH_SECRET` | Secret for NextAuth.js encryption | Yes |
-| `NEXTAUTH_URL` | Base URL of your application | Yes |
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL | Yes |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anonymous key | Yes |
+| Variable                        | Description                       | Required |
+| ------------------------------- | --------------------------------- | -------- |
+| `TWITTER_CLIENT_ID`             | Twitter OAuth Client ID           | Yes      |
+| `TWITTER_CLIENT_SECRET`         | Twitter OAuth Client Secret       | Yes      |
+| `NEXTAUTH_SECRET`               | Secret for NextAuth.js encryption | Yes      |
+| `NEXTAUTH_URL`                  | Base URL of your application      | Yes      |
+| `NEXT_PUBLIC_SUPABASE_URL`      | Supabase project URL              | Yes      |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anonymous key            | Yes      |
 
 ## Database Schema
 
@@ -147,6 +150,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Documentation
 
+- **[SETUP_GUIDE.md](./SETUP_GUIDE.md)** - ⭐ **Start here!** Complete guide for using this waitlist system in any project
+- **[NEXTJS_15_COMPATIBILITY.md](./NEXTJS_15_COMPATIBILITY.md)** - Guide for using this in Next.js 15 projects
 - **[IMPLEMENTATION_GUIDE.md](./IMPLEMENTATION_GUIDE.md)** - Complete guide on how Twitter authentication was implemented from start to finish
 - **[QUICK_DEPLOY.md](./QUICK_DEPLOY.md)** - Quick reference for deployment
 - **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** - Troubleshooting guide
@@ -154,6 +159,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Support
 
 For issues and questions:
+
 - Check the [IMPLEMENTATION_GUIDE.md](./IMPLEMENTATION_GUIDE.md) for detailed implementation steps
 - Review the [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) guide
 - Open an issue on GitHub
