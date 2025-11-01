@@ -145,9 +145,15 @@ The app uses a `profiles` table with the following structure:
 
 This project is open source and available under the [MIT License](LICENSE).
 
+## Documentation
+
+- **[IMPLEMENTATION_GUIDE.md](./IMPLEMENTATION_GUIDE.md)** - Complete guide on how Twitter authentication was implemented from start to finish
+- **[QUICK_DEPLOY.md](./QUICK_DEPLOY.md)** - Quick reference for deployment
+- **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** - Troubleshooting guide
+
 ## Support
 
 For issues and questions:
-- Check the [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) guide
-- Review the [DEPLOYMENT.md](./DEPLOYMENT.md) for deployment issues
+- Check the [IMPLEMENTATION_GUIDE.md](./IMPLEMENTATION_GUIDE.md) for detailed implementation steps
+- Review the [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) guide
 - Open an issue on GitHub
